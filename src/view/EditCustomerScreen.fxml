@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="522.0" prefWidth="452.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.EditCustomerScreenController">
+   <children>
+      <GridPane layoutX="84.0" layoutY="76.0" prefHeight="391.0" prefWidth="292.0" AnchorPane.bottomAnchor="55.0" AnchorPane.leftAnchor="84.0" AnchorPane.rightAnchor="76.0" AnchorPane.topAnchor="76.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Name:" GridPane.halignment="LEFT">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="nameText" GridPane.columnIndex="1" />
+            <TextField fx:id="addressTextOne" layoutX="156.0" layoutY="31.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="cityText" layoutX="156.0" layoutY="96.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="countryText" layoutX="156.0" layoutY="161.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="postalCodeText" layoutX="156.0" layoutY="226.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <TextField fx:id="phoneText" layoutX="156.0" layoutY="291.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <Label layoutX="54.0" layoutY="28.0" text="Address:" GridPane.halignment="LEFT" GridPane.rowIndex="1">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="45.0" layoutY="94.0" text="City:" GridPane.halignment="LEFT" GridPane.rowIndex="3">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="159.0" text="Country:" GridPane.rowIndex="4">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="224.0" text="Postal Code:" GridPane.rowIndex="5">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="289.0" text="Phone:" GridPane.rowIndex="6">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="addressTextTwo" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label layoutX="10.0" layoutY="79.0" text="Address Line 2:" GridPane.rowIndex="2">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+      <Label layoutX="14.0" layoutY="14.0" text="Edit Customer">
+         <font>
+            <Font name="System Bold" size="32.0" />
+         </font>
+      </Label>
+      <Button fx:id="saveButton" layoutX="324.0" layoutY="483.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="52.0" text="Save" />
+      <Button fx:id="cancelButton" layoutX="261.0" layoutY="483.0" mnemonicParsing="false" text="Cancel" />
+   </children>
+</AnchorPane>

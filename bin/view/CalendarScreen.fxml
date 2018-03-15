@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.media.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="822.0" prefWidth="1226.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CalendarScreenController">
+   <children>
+      <GridPane fx:id="monthPane" gridLinesVisible="true" layoutX="36.0" layoutY="155.0" prefHeight="631.0" prefWidth="1155.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TextArea fx:id="weekOneSunday" editable="false" prefHeight="200.0" prefWidth="200.0" />
+            <TextArea fx:id="weekOneMonday" editable="false" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" />
+            <TextArea fx:id="weekOneTuesday" editable="false" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" />
+            <TextArea fx:id="weekOneWednesday" editable="false" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" />
+            <TextArea fx:id="weekOneThursday" editable="false" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" />
+            <TextArea fx:id="weekOneFriday" editable="false" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5" />
+            <TextArea fx:id="weekOneSaturday" editable="false" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6" />
+            <TextArea fx:id="weekTwoSunday" editable="false" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1" />
+            <TextArea fx:id="weekTwoMonday" editable="false" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextArea fx:id="weekTwoTuesday" editable="false" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <TextArea fx:id="weekTwoWednesday" editable="false" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <TextArea fx:id="weekTwoThursday" editable="false" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+            <TextArea fx:id="weekTwoFriday" editable="false" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+            <TextArea fx:id="weekTwoSaturday" editable="false" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+            <TextArea fx:id="weekThreeSunday" editable="false" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2" />
+            <TextArea fx:id="weekThreeMonday" editable="false" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextArea fx:id="weekThreeTuesday" editable="false" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <TextArea fx:id="weekThreeWednesday" editable="false" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <TextArea fx:id="weekThreeThursday" editable="false" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+            <TextArea fx:id="weekThreeFriday" editable="false" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+            <TextArea fx:id="weekThreeSaturday" editable="false" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+            <TextArea fx:id="weekFourSunday" editable="false" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3" />
+            <TextArea fx:id="weekFourMonday" editable="false" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextArea fx:id="weekFourTuesday" editable="false" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <TextArea fx:id="weekFourWednesday" editable="false" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <TextArea fx:id="weekFourThursday" editable="false" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+            <TextArea fx:id="weekFourFriday" editable="false" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+            <TextArea fx:id="weekFourSaturday" editable="false" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+            <TextArea fx:id="weekFiveSunday" editable="false" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="4" />
+            <TextArea fx:id="weekFiveMonday" editable="false" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextArea fx:id="weekFiveTuesday" editable="false" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <TextArea fx:id="weekFiveWednesday" editable="false" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+            <TextArea fx:id="weekFiveThursday" editable="false" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+            <TextArea fx:id="weekFiveFriday" editable="false" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+            <TextArea fx:id="weekFiveSaturday" editable="false" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="4" />
+            <TextArea fx:id="weekSixSunday" editable="false" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="5" />
+            <TextArea fx:id="weekSixMonday" editable="false" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Label fx:id="weekOneSundayLabel" text="Label" GridPane.valignment="TOP">
+               <GridPane.margin>
+                  <Insets left="5.0" top="5.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="weekOneMondayLabel" text="Label" GridPane.columnIndex="1" GridPane.valignment="TOP">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="5.0" top="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="weekOneTuesdayLabel" text="Label" GridPane.columnIndex="2" GridPane.valignment="TOP">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="5.0" top="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="weekOneWednesdayLabel" text="Label" GridPane.columnIndex="3" GridPane.valignment="TOP">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="5.0" top="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="weekOneThursdayLabel" text="Label" GridPane.columnIndex="4" GridPane.valignment="TOP">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="5.0" top="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="weekOneFridayLabel" text="Label" GridPane.columnIndex="5" GridPane.valignment="TOP">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="5.0" top="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="weekOneSaturdayLabel" text="Label" GridPane.columnIndex="6" GridPane.valignment="TOP">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="5.0" top="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="weekTwoSundayLabel" text="Label" GridPane.rowIndex="1" GridPane.valignment="TOP">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="5.0" top="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="weekTwoMondayLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="TOP">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="5.0" top="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="weekTwoTuesdayLabel" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="1" GridPane.valignment="TOP">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="5.0" top="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="weekTwoWednesdayLabel" text="Label" GridPane.columnIndex="3" GridPane.rowIndex="1" GridPane.valignment="TOP">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="5.0" top="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="weekThreeSundayLabel" text="Label" GridPane.rowIndex="2" GridPane.valignment="TOP">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="5.0" top="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="weekFourSundayLabel" text="Label" GridPane.rowIndex="3" GridPane.valignment="TOP">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="5.0" top="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="weekFiveSundayLabel" text="Label" GridPane.rowIndex="4" GridPane.valignment="TOP">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="5.0" top="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="weekSixSundayLabel" text="Label" GridPane.rowIndex="5" GridPane.valignment="TOP">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="5.0" top="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="weekThreeMondayLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.valignment="TOP">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="5.0" top="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="weekThreeTuesdayLabel" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="2" GridPane.valignment="TOP">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="5.0" top="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="weekFourMondayLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3" GridPane.valignment="TOP">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="5.0" top="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="weekFiveMondayLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="4" GridPane.valignment="TOP">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="5.0" top="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="weekSixMondayLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="5" GridPane.valignment="TOP">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="5.0" top="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="weekFourTuesdayLabel" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="3" GridPane.valignment="TOP">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="5.0" top="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="weekFiveTuesdayLabel" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="4" GridPane.valignment="TOP">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="5.0" top="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="weekThreeWednesdayLabel" text="Label" GridPane.columnIndex="3" GridPane.rowIndex="2" GridPane.valignment="TOP">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="5.0" top="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="weekTwoThursdayLabel" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="1" GridPane.valignment="TOP">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="5.0" top="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="weekTwoFridayLabel" text="Label" GridPane.columnIndex="5" GridPane.rowIndex="1" GridPane.valignment="TOP">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="5.0" top="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="weekTwoSaturdayLabel" text="Label" GridPane.columnIndex="6" GridPane.rowIndex="1" GridPane.valignment="TOP">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="5.0" top="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="weekThreeThursdayLabel" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="2" GridPane.valignment="TOP">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="5.0" top="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="weekThreeFridayLabel" text="Label" GridPane.columnIndex="5" GridPane.rowIndex="2" GridPane.valignment="TOP">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="5.0" top="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="weekThreeSaturdayLabel" text="Label" GridPane.columnIndex="6" GridPane.rowIndex="2" GridPane.valignment="TOP">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="5.0" top="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="weekFourWednesdayLabel" text="Label" GridPane.columnIndex="3" GridPane.rowIndex="3" GridPane.valignment="TOP">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="5.0" top="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="weekFiveWednesdayLabel" text="Label" GridPane.columnIndex="3" GridPane.rowIndex="4" GridPane.valignment="TOP">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="5.0" top="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="weekFourThursdayLabel" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="3" GridPane.valignment="TOP">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="5.0" top="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="weekFiveThursdayLabel" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="4" GridPane.valignment="TOP">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="5.0" top="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="weekFourFridayLabel" text="Label" GridPane.columnIndex="5" GridPane.rowIndex="3" GridPane.valignment="TOP">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="5.0" top="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="weekFourSaturdayLabel" text="Label" GridPane.columnIndex="6" GridPane.rowIndex="3" GridPane.valignment="TOP">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="5.0" top="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="weekFiveFridayLabel" text="Label" GridPane.columnIndex="5" GridPane.rowIndex="4" GridPane.valignment="TOP">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="5.0" top="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="weekFiveSaturdayLabel" text="Label" GridPane.columnIndex="6" GridPane.rowIndex="4" GridPane.valignment="TOP">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="5.0" top="5.0" />
+               </GridPane.margin>
+            </Label>
+         </children>
+      </GridPane>
+      <HBox alignment="CENTER" layoutX="14.0" layoutY="14.0" spacing="10.0">
+         <children>
+            <Button fx:id="previousButton" layoutX="290.0" layoutY="35.0" mnemonicParsing="false" text="&lt;-" />
+            <Button fx:id="nextButton" layoutX="397.0" layoutY="35.0" mnemonicParsing="false" text="-&gt;" />
+            <Label fx:id="monthName" layoutX="14.0" layoutY="14.0" text="Calendar">
+               <font>
+                  <Font name="System Bold" size="45.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox layoutX="540.0" layoutY="64.0" spacing="10.0">
+         <children>
+            <RadioButton fx:id="monthRadio" layoutX="531.0" layoutY="40.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="77.0" selected="true" text="Month">
+               <toggleGroup>
+                  <ToggleGroup fx:id="calendarGroup" />
+               </toggleGroup>
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="weekRadio" layoutX="619.0" layoutY="40.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="77.0" text="Week" toggleGroup="$calendarGroup">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </RadioButton>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="36.0" layoutY="97.0" prefHeight="58.0" prefWidth="165.0" spacing="5.0">
+         <children>
+            <Label text="Sunday">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="201.0" layoutY="97.0" prefHeight="58.0" prefWidth="165.0" spacing="5.0">
+         <children>
+            <Label text="Monday">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="366.0" layoutY="97.0" prefHeight="58.0" prefWidth="165.0" spacing="5.0">
+         <children>
+            <Label text="Tuesday">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="531.0" layoutY="97.0" prefHeight="58.0" prefWidth="165.0" spacing="5.0">
+         <children>
+            <Label text="Wednesday">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="696.0" layoutY="97.0" prefHeight="58.0" prefWidth="165.0" spacing="5.0">
+         <children>
+            <Label text="Thursday">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="861.0" layoutY="97.0" prefHeight="58.0" prefWidth="165.0" spacing="5.0">
+         <children>
+            <Label text="Friday">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="1026.0" layoutY="97.0" prefHeight="58.0" prefWidth="165.0" spacing="5.0">
+         <children>
+            <Label text="Saturday">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <Button fx:id="backToAppointmentsButton" layoutX="1078.0" layoutY="35.0" mnemonicParsing="false" text="Back to Appointments" />
+      <GridPane fx:id="weekPane" gridLinesVisible="true" layoutX="36.0" layoutY="155.0" prefHeight="631.0" prefWidth="1155.0" visible="false">
+         <children>
+            <TextArea fx:id="weekSunday" editable="false" prefHeight="200.0" prefWidth="200.0" />
+            <TextArea fx:id="weekMonday" editable="false" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" />
+            <TextArea fx:id="weekTuesday" editable="false" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" />
+            <TextArea fx:id="weekWednesday" editable="false" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" />
+            <TextArea fx:id="weekThursday" editable="false" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" />
+            <TextArea fx:id="weekFriday" editable="false" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5" />
+            <TextArea fx:id="weekSaturday" editable="false" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6" />
+            <Label fx:id="weekSundayLabel" text="Label" GridPane.valignment="TOP">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="5.0" top="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="weekMondayLabel" text="Label" GridPane.columnIndex="1" GridPane.valignment="TOP">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="5.0" top="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="weekTuesdayLabel" text="Label" GridPane.columnIndex="2" GridPane.valignment="TOP">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="5.0" top="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="weekWednesdayLabel" text="Label" GridPane.columnIndex="3" GridPane.valignment="TOP">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="5.0" top="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="weekThursdayLabel" text="Label" GridPane.columnIndex="4" GridPane.valignment="TOP">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="5.0" top="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="weekFridayLabel" text="Label" GridPane.columnIndex="5" GridPane.valignment="TOP">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="5.0" top="5.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="weekSaturdayLabel" text="Label" GridPane.columnIndex="6" GridPane.valignment="TOP">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="5.0" top="5.0" />
+               </GridPane.margin>
+            </Label>
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+   </children>
+</AnchorPane>
