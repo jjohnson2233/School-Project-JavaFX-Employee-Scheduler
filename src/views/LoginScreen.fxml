@@ -34,7 +34,7 @@
       </GridPane>
       <HBox alignment="CENTER_RIGHT" layoutX="289.0" layoutY="217.0" prefHeight="27.0" prefWidth="57.0">
          <children>
-            <Button fx:id="signInButton" mnemonicParsing="false" prefHeight="27.0" prefWidth="128.0" text="Sign In" />
+            <Button fx:id="signInButton" defaultButton="true" mnemonicParsing="false" prefHeight="27.0" prefWidth="128.0" text="Sign In" />
          </children>
       </HBox>
    </children>
