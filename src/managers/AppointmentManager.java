@@ -20,8 +20,8 @@ public class AppointmentManager {
 		
 		//SQL statement
 		String sql = "INSERT into appointment "
-							+ "(appointmentId, customerId, title, description, location, contact, url, start, end, createDate, createdBy, lastUpdate, lastUpdateBy) "
-							+ "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, NOW(), ?, NOW(), ?)";
+							+ "(appointmentId, customerId, userId, title, description, location, contact, url, start, end, createDate, createdBy, lastUpdate, lastUpdateBy) "
+							+ "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, NOW(), ?, NOW(), ?)";
 		
 		//Connection to database
 		try (
@@ -32,15 +32,16 @@ public class AppointmentManager {
 			//Set values in database
 			stmt.setInt(1, appointment.getAppointmentID());
 			stmt.setInt(2, appointment.getCustomerID());
-			stmt.setString(3, appointment.getTitle());
-			stmt.setString(4, appointment.getDescription());
-			stmt.setString(5, appointment.getLocation());
-			stmt.setString(6, appointment.getContact());
-			stmt.setString(7, appointment.getUrl());
-			stmt.setTimestamp(8, Timestamp.valueOf(appointment.getStart().withZoneSameInstant(ZoneId.of("UTC+0")).toLocalDateTime()));
-			stmt.setTimestamp(9, Timestamp.valueOf(appointment.getEnd().withZoneSameInstant(ZoneId.of("UTC+0")).toLocalDateTime()));
-			stmt.setString(10, DB.currentUser.getUserName());
+			stmt.setInt(3, DB.currentUser.getUserID());
+			stmt.setString(4, appointment.getTitle());
+			stmt.setString(5, appointment.getDescription());
+			stmt.setString(6, appointment.getLocation());
+			stmt.setString(7, appointment.getContact());
+			stmt.setString(8, appointment.getUrl());
+			stmt.setTimestamp(9, Timestamp.valueOf(appointment.getStart().withZoneSameInstant(ZoneId.of("UTC+0")).toLocalDateTime()));
+			stmt.setTimestamp(10, Timestamp.valueOf(appointment.getEnd().withZoneSameInstant(ZoneId.of("UTC+0")).toLocalDateTime()));
 			stmt.setString(11, DB.currentUser.getUserName());
+			stmt.setString(12, DB.currentUser.getUserName());
 			stmt.executeUpdate();
 			return true;
 		} catch (SQLException e) {
