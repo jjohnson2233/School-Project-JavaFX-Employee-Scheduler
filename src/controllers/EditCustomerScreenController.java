@@ -104,6 +104,7 @@ public class EditCustomerScreenController implements Initializable {
 			root = FXMLLoader.load(getClass().getResource("../views/CustomerScreen.fxml"));
 			Scene scene = new Scene(root);
 			stage.setScene(scene);
+			stage.setResizable(false);
 			stage.show();
 		} catch (SQLException | IOException e) {
 			e.printStackTrace();
@@ -121,6 +122,7 @@ public class EditCustomerScreenController implements Initializable {
 			root = FXMLLoader.load(getClass().getResource("../views/CustomerScreen.fxml"));
 			Scene scene = new Scene(root);
 			stage.setScene(scene);
+			stage.setResizable(false);
 			stage.show();
 		} catch (IOException e) {
 			e.printStackTrace();

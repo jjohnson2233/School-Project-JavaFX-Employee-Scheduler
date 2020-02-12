@@ -40,6 +40,7 @@ public class AppointmentScreenController implements Initializable {
 			root = FXMLLoader.load(getClass().getResource("../views/ReportsScreen.fxml"));
 			Scene scene = new Scene(root);
 			stage.setScene(scene);
+			stage.setResizable(false);
 			stage.show();
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -57,6 +58,7 @@ public class AppointmentScreenController implements Initializable {
 			root = FXMLLoader.load(getClass().getResource("../views/CalendarScreen.fxml"));
 			Scene scene = new Scene(root);
 			stage.setScene(scene);
+			stage.setResizable(false);
 			stage.show();
 		} catch (IOException e) {
 			e.printStackTrace();
