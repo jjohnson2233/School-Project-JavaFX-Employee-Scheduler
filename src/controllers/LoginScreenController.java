@@ -51,7 +51,7 @@ public class LoginScreenController {
 	
 	//Change to the Customer screen and add login to log file
 	private void login() {
-		//Log the sign in in the log file
+		//Log the sign-in in the log file
 		String timeStamp = new SimpleDateFormat("MM/dd/yyyy").format(new Date()) + " " + new SimpleDateFormat("HH:mm:ss").format(new Date()) + "\t" + DB.currentUser.getUserName();
 		try (BufferedWriter writer = new BufferedWriter(new FileWriter("log.txt", true)))
 		{
@@ -65,7 +65,7 @@ public class LoginScreenController {
 		Parent root = null;
 		Stage stage = (Stage) signInButton.getScene().getWindow();
 		try {
-			root = FXMLLoader.load(getClass().getResource("../view/CustomerScreen.fxml"));
+			root = FXMLLoader.load(getClass().getResource("../views/CustomerScreen.fxml"));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -82,7 +82,8 @@ public class LoginScreenController {
 		} else {
 			//Check if user exists in the database
 			try {
-				if (UserManager.lookup(usernameText.getText().toLowerCase())) {
+				String username = usernameText.getText().toLowerCase();
+				if (UserManager.lookup(username)) {
 					//Create a user object for existing user
 					User user = UserManager.getRow(usernameText.getText());
 					//Check if password matches
@@ -99,6 +100,7 @@ public class LoginScreenController {
 					Alert alert = new Alert(AlertType.CONFIRMATION);
 					alert.setHeaderText("User doesn't exist");
 					alert.setContentText("Do you want to create a new user?");
+					alert.getDialogPane().setPrefSize(350, 300);
 					alert.showAndWait()
 							.filter(response -> response == ButtonType.OK)
 							.ifPresent(response -> {
@@ -133,6 +135,7 @@ public class LoginScreenController {
 			} catch (LoginException e) {
 				Alert alert = new Alert(AlertType.ERROR);
 				alert.setHeaderText(rb.getString("error"));
+				alert.getDialogPane().setPrefSize(350, 300);
 				alert.showAndWait();
 			}
 		});

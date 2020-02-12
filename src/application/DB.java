@@ -18,7 +18,7 @@ import tables.User;
 public class DB {
 	public static final String USERNAME = "U03ZZf";
 	public static final String PASSWORD = "53688127253";
-	public static final String URL = "jdbc:mysql://52.206.157.109/U03ZZf";
+	public static final String URL = "jdbc:mysql://3.227.166.251/U03ZZf";
 	public static User currentUser;
 	
 	public static ObservableList<ListedCustomer> gatherCustomers() throws SQLException {

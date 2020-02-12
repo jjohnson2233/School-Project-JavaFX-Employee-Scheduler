@@ -37,7 +37,7 @@ public class AppointmentScreenController implements Initializable {
 		try {
 			Parent root;
 			Stage stage = (Stage) reportsButton.getScene().getWindow();
-			root = FXMLLoader.load(getClass().getResource("../view/ReportsScreen.fxml"));
+			root = FXMLLoader.load(getClass().getResource("../views/ReportsScreen.fxml"));
 			Scene scene = new Scene(root);
 			stage.setScene(scene);
 			stage.show();
@@ -54,7 +54,7 @@ public class AppointmentScreenController implements Initializable {
 		try {
 			Parent root;
 			Stage stage = (Stage) calendarButton.getScene().getWindow();
-			root = FXMLLoader.load(getClass().getResource("../view/CalendarScreen.fxml"));
+			root = FXMLLoader.load(getClass().getResource("../views/CalendarScreen.fxml"));
 			Scene scene = new Scene(root);
 			stage.setScene(scene);
 			stage.show();
@@ -80,7 +80,7 @@ public class AppointmentScreenController implements Initializable {
 		try {
 			Parent root;
 			Stage stage = (Stage) customersButton.getScene().getWindow();
-			root = FXMLLoader.load(getClass().getResource("../view/CustomerScreen.fxml"));
+			root = FXMLLoader.load(getClass().getResource("../views/CustomerScreen.fxml"));
 			Scene scene = new Scene(root);
 			stage.setScene(scene);
 			stage.show();
@@ -100,7 +100,7 @@ public class AppointmentScreenController implements Initializable {
 			//Go to the edit appointment screen
 			Parent root;
 			Stage stage = (Stage) editButton.getScene().getWindow();
-			root = FXMLLoader.load(getClass().getResource("../view/EditAppointmentScreen.fxml"));
+			root = FXMLLoader.load(getClass().getResource("../views/EditAppointmentScreen.fxml"));
 			Scene scene = new Scene(root);
 			stage.setScene(scene);
 			stage.show();

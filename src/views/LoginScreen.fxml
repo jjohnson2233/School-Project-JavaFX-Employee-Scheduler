@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
-<?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
-<?import java.lang.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="330.0" prefWidth="444.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LoginScreenController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="330.0" prefWidth="444.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LoginScreenController">
    <children>
       <GridPane layoutX="98.0" layoutY="72.0" prefHeight="131.0" prefWidth="248.0">
         <columnConstraints>
@@ -35,9 +32,9 @@
             <Label fx:id="passwordLabel" text="Password:" GridPane.rowIndex="4" />
          </children>
       </GridPane>
-      <HBox alignment="CENTER_RIGHT" layoutX="293.0" layoutY="217.0" prefHeight="25.0" prefWidth="53.0">
+      <HBox alignment="CENTER_RIGHT" layoutX="289.0" layoutY="217.0" prefHeight="27.0" prefWidth="57.0">
          <children>
-            <Button fx:id="signInButton" mnemonicParsing="false" text="Sign In" />
+            <Button fx:id="signInButton" mnemonicParsing="false" prefHeight="27.0" prefWidth="128.0" text="Sign In" />
          </children>
       </HBox>
    </children>

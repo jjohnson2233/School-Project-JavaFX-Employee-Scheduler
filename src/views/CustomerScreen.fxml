@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
-<?import java.lang.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="677.0" prefWidth="776.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CustomerScreenController">
+<AnchorPane prefHeight="677.0" prefWidth="776.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CustomerScreenController">
    <children>
       <TableView fx:id="customersTable" layoutX="14.0" layoutY="87.0" prefHeight="534.0" prefWidth="744.0">
         <columns>
@@ -26,7 +24,10 @@
       <Button fx:id="deleteButton" layoutX="711.0" layoutY="638.0" mnemonicParsing="false" text="Delete" />
       <Button fx:id="editButton" layoutX="665.0" layoutY="638.0" mnemonicParsing="false" text="Edit" />
       <Button fx:id="addButton" layoutX="619.0" layoutY="638.0" mnemonicParsing="false" text="Add" />
-      <Button fx:id="addAppointmentButton" layoutX="646.0" layoutY="38.0" mnemonicParsing="false" text="Add Appointment" />
+      <Button fx:id="addAppointmentButton" layoutX="637.0" layoutY="38.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="123.0" text="Add Appointment">
+         <font>
+            <Font name="System Font" size="13.0" />
+         </font></Button>
       <Button fx:id="appointmentsButton" layoutX="14.0" layoutY="638.0" mnemonicParsing="false" text="Appointment List" />
    </children>
 </AnchorPane>

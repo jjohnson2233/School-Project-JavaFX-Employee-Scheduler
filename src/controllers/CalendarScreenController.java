@@ -203,7 +203,7 @@ public class CalendarScreenController implements Initializable {
 		try {
 			Parent root;
 			Stage stage = (Stage) backToAppointmentsButton.getScene().getWindow();
-			root = FXMLLoader.load(getClass().getResource("../view/AppointmentScree.fxml"));
+			root = FXMLLoader.load(getClass().getResource("../views/AppointmentScreen.fxml"));
 			Scene scene = new Scene(root);
 			stage.setScene(scene);
 			stage.show();

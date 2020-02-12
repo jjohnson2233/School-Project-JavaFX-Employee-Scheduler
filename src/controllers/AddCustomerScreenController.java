@@ -98,7 +98,7 @@ public class AddCustomerScreenController implements Initializable {
 			//Go back to the customer screen
 			Parent root;
 			Stage stage = (Stage) saveButton.getScene().getWindow();
-			root = FXMLLoader.load(getClass().getResource("../view/CustomerScreen.fxml"));
+			root = FXMLLoader.load(getClass().getResource("../views/CustomerScreen.fxml"));
 			Scene scene = new Scene(root);
 			stage.setScene(scene);
 			stage.show();
@@ -116,7 +116,7 @@ public class AddCustomerScreenController implements Initializable {
 			//Go back to the customer screen
 			Parent root;
 			Stage stage = (Stage) cancelButton.getScene().getWindow();
-			root = FXMLLoader.load(getClass().getResource("../view/CustomerScreen.fxml"));
+			root = FXMLLoader.load(getClass().getResource("../views/CustomerScreen.fxml"));
 			Scene scene = new Scene(root);
 			stage.setScene(scene);
 			stage.show();

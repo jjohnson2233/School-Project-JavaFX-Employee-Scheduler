@@ -45,7 +45,7 @@ public class CustomerScreenController implements Initializable{
 				//Go to add appointment screen
 				Parent root;
 				Stage stage = (Stage) appointmentsButton.getScene().getWindow();
-				root = FXMLLoader.load(getClass().getResource("../view/AddAppointmentScreen.fxml"));
+				root = FXMLLoader.load(getClass().getResource("../views/AddAppointmentScreen.fxml"));
 				Scene scene = new Scene(root);
 				stage.setScene(scene);
 				stage.show();
@@ -66,13 +66,12 @@ public class CustomerScreenController implements Initializable{
 		
 		//Appointments List button
 		@FXML private Button appointmentsButton;
-		
 		//Appointments list button action
 		private void appointmentsButtonAction(ActionEvent event) {
 			try {
 				Parent root;
 				Stage stage = (Stage) appointmentsButton.getScene().getWindow();
-				root = FXMLLoader.load(getClass().getResource("../view/AppointmentScree.fxml"));
+				root = FXMLLoader.load(getClass().getResource("../views/AppointmentScreen.fxml"));
 				Scene scene = new Scene(root);
 				stage.setScene(scene);
 				stage.show();
@@ -83,13 +82,12 @@ public class CustomerScreenController implements Initializable{
 		
 		//Add button
 		@FXML private Button addButton;
-		
 		//Add button action
 		private void addButtonAction(ActionEvent event) {
 			try {
 				Parent root;
 				Stage stage = (Stage) appointmentsButton.getScene().getWindow();
-				root = FXMLLoader.load(getClass().getResource("../view/AddCustomerScreen.fxml"));
+				root = FXMLLoader.load(getClass().getResource("../views/AddCustomerScreen.fxml"));
 				Scene scene = new Scene(root);
 				stage.setScene(scene);
 				stage.show();
@@ -100,7 +98,6 @@ public class CustomerScreenController implements Initializable{
 		
 		//Edit button
 		@FXML private Button editButton;
-		
 		//Edit button action
 		private void editButtonAction(ActionEvent event) {
 			//Assign selected item
@@ -110,7 +107,7 @@ public class CustomerScreenController implements Initializable{
 				//Go to edit screen
 				Parent root;
 				Stage stage = (Stage) appointmentsButton.getScene().getWindow();
-				root = FXMLLoader.load(getClass().getResource("../view/EditCustomerScreen.fxml"));
+				root = FXMLLoader.load(getClass().getResource("../views/EditCustomerScreen.fxml"));
 				Scene scene = new Scene(root);
 				stage.setScene(scene);
 				stage.show();
@@ -121,7 +118,6 @@ public class CustomerScreenController implements Initializable{
 		
 		//Delete button
 		@FXML private Button deleteButton;
-		
 		//Delete button action
 		private void deleteButtonAction(ActionEvent event) {
 			//Get the selected item

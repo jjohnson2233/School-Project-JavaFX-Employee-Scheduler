@@ -16,7 +16,7 @@ public class UserManager {
 	public static boolean add(User user) {
 		//SQL statement
 		String sql = "INSERT into user "
-				+ "(userId, userName, password, active, createBy, createDate, lastUpdate, lastUpdatedBy) "
+				+ "(userId, userName, password, active, createdBy, createDate, lastUpdate, lastUpdateBy) "
 				+ "VALUES (?, ?, ?, 1, ?, NOW(), NOW(), ?)";
 		
 		//Database Connection
@@ -119,9 +119,9 @@ public class UserManager {
 				User user = new User(rs.getString("userName"), rs.getString("password"));
 				user.setUserID(userID);
 				user.setCreateDate(rs.getTimestamp("createDate"));
-				user.setCreateBy(rs.getString("createBy"));
+				user.setCreateBy(rs.getString("createdBy"));
 				user.setLastUpdate(rs.getTimestamp("lastUpdate"));
-				user.setLastUpdatedBy(rs.getString("lastUpdatedBy"));
+				user.setLastUpdatedBy(rs.getString("lastUpdateBy"));
 				return user;
 			} else {
 				return null;
@@ -156,9 +156,9 @@ public class UserManager {
 				User user = new User(rs.getString("userName"), rs.getString("password"));
 				user.setUserID(rs.getInt("userId"));
 				user.setCreateDate(rs.getTimestamp("createDate"));
-				user.setCreateBy(rs.getString("createBy"));
+				user.setCreateBy(rs.getString("createdBy"));
 				user.setLastUpdate(rs.getTimestamp("lastUpdate"));
-				user.setLastUpdatedBy(rs.getString("lastUpdatedBy"));
+				user.setLastUpdatedBy(rs.getString("lastUpdateBy"));
 				return user;
 			} else {
 				return null;
@@ -190,9 +190,9 @@ public class UserManager {
 				User user = new User(rs.getString("userName"), rs.getString("password"));
 				user.setUserID(rs.getInt("userId"));
 				user.setCreateDate(rs.getTimestamp("createDate"));
-				user.setCreateBy(rs.getString("createBy"));
+				user.setCreateBy(rs.getString("createdBy"));
 				user.setLastUpdate(rs.getTimestamp("lastUpdate"));
-				user.setLastUpdatedBy(rs.getString("lastUpdatedBy"));
+				user.setLastUpdatedBy(rs.getString("lastUpdateBy"));
 				users.add(user);
 			}
 			return users;

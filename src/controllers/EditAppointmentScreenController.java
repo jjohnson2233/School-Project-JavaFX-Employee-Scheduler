@@ -142,7 +142,7 @@ public class EditAppointmentScreenController implements Initializable {
 			//Go back to appointment screen
 			Parent root;
 			Stage stage = (Stage) saveButton.getScene().getWindow();
-			root = FXMLLoader.load(getClass().getResource("../view/AppointmentScree.fxml"));
+			root = FXMLLoader.load(getClass().getResource("../views/AppointmentScreen.fxml"));
 			Scene scene = new Scene(root);
 			stage.setScene(scene);
 			stage.show();
@@ -160,7 +160,7 @@ public class EditAppointmentScreenController implements Initializable {
 		try {
 			Parent root;
 			Stage stage = (Stage) cancelButton.getScene().getWindow();
-			root = FXMLLoader.load(getClass().getResource("../view/AppointmentScree.fxml"));
+			root = FXMLLoader.load(getClass().getResource("../views/AppointmentScreen.fxml"));
 			Scene scene = new Scene(root);
 			stage.setScene(scene);
 			stage.show();
