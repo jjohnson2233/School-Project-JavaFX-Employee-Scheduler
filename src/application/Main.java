@@ -12,7 +12,7 @@ import javafx.stage.Stage;
 public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) throws IOException {
-		Parent root = FXMLLoader.load(getClass().getResource("../views/CustomerScreen.fxml"));
+		Parent root = FXMLLoader.load(getClass().getResource("../views/LoginScreen.fxml"));
 		//Scene scene = new Scene(root,400,350);
 		Scene scene = new Scene(root);
 		scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
