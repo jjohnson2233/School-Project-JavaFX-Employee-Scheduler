@@ -4,9 +4,12 @@ import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
 import java.time.format.DateTimeFormatter;
+import java.util.List;
 import java.util.ResourceBundle;
+import java.util.stream.Collectors;
 
 import application.ListedAppointment;
+import application.ListedCustomer;
 import application.ScheduledAppointments;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -19,6 +22,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import managers.AppointmentManager;
@@ -26,12 +30,39 @@ import managers.ReminderManager;
 import tables.Reminder;
 
 public class AppointmentScreenController implements Initializable {
+	//List of appointments in the database
+	ObservableList<ListedAppointment> listOfAppointments = FXCollections.observableArrayList();
+
 	//Object for selected item
 	public static ListedAppointment selectedItem;
-	
+
+	//Search text field
+	@FXML private TextField searchTextField;
+
+	//Search button
+	@FXML private Button searchButton;
+	//Search button action
+	private void searchButtonAction(ActionEvent event) {
+		//Get the search term
+		String searchTerm = searchTextField.getText();
+		//Get a list of the customers in the database and filter them by the search term
+		List rawList = listOfAppointments.stream()
+				.filter(appointment ->
+						appointment.getTitle().toLowerCase().contains(searchTerm.toLowerCase()) ||
+						appointment.getContact().toLowerCase().contains(searchTerm.toLowerCase()) ||
+						appointment.getDescription().toLowerCase().contains(searchTerm.toLowerCase()) ||
+						appointment.getLocation().toLowerCase().contains(searchTerm.toLowerCase()) ||
+						appointment.getUrl().toLowerCase().contains(searchTerm.toLowerCase())
+				)
+				.collect(Collectors.toList());
+		//Make the list observable
+		ObservableList<ListedAppointment> observableList = FXCollections.observableList(rawList);
+		//Set the table to show the new filtered list
+		appointmentsTable.setItems(observableList);
+	}
+
 	//Reports button
 	@FXML private Button reportsButton;
-	
 	//Reports button action
 	private void reportsButtonAction(ActionEvent event) {
 		try {
@@ -49,7 +80,6 @@ public class AppointmentScreenController implements Initializable {
 	
 	//Calendar button
 	@FXML private Button calendarButton;
-	
 	//Calendar button action
 	private void calendarButtonAction(ActionEvent event) {
 		try {
@@ -76,7 +106,6 @@ public class AppointmentScreenController implements Initializable {
 	
 	//Back to customers button
 	@FXML private Button customersButton;
-	
 	//Back to customers button action
 	private void customersButtonAction(ActionEvent event) {
 		try {
@@ -93,7 +122,6 @@ public class AppointmentScreenController implements Initializable {
 	
 	//Edit button
 	@FXML private Button editButton;
-	
 	//Edit button action
 	private void editButtonAction(ActionEvent event) {
 		try {
@@ -113,7 +141,6 @@ public class AppointmentScreenController implements Initializable {
 	
 	//Delete button
 	@FXML private Button deleteButton;
-	
 	//Delete button action
 	private void deleteButtonAction(ActionEvent event) {
 		//Delete from database
@@ -140,14 +167,12 @@ public class AppointmentScreenController implements Initializable {
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		//Set button actions
+		searchButton.setOnAction(event -> searchButtonAction(event));
 		reportsButton.setOnAction(event -> reportsButtonAction(event));
 		calendarButton.setOnAction(event -> calendarButtonAction(event));
 		customersButton.setOnAction(event -> customersButtonAction(event));
 		editButton.setOnAction(event -> editButtonAction(event));
 		deleteButton.setOnAction(event -> deleteButtonAction(event));
-		
-		//Create list for table items
-		ObservableList<ListedAppointment> tableItems = FXCollections.observableArrayList();
 		
 		//Gather data from database
 		try {
@@ -166,14 +191,14 @@ public class AppointmentScreenController implements Initializable {
 					String ampmEnd = appointment.getEnd().toLocalTime().format(ampmFormatter).toString();
 					ListedAppointment listedAppointment = new ListedAppointment(Integer.toString(appointment.getAppointmentID()), Integer.toString(appointment.getCustomerID()), appointment.getTitle(), 
 							appointment.getDescription(), appointment.getLocation(), appointment.getContact(), appointment.getUrl(), start, end, startHour, startMinute, endHour, endMinute, ampmStart, ampmEnd);
-					tableItems.add(listedAppointment);
+					listOfAppointments.add(listedAppointment);
 				});
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
 		
 		//Put data in table
-		appointmentsTable.setItems(tableItems);
+		appointmentsTable.setItems(listOfAppointments);
 		
 		//Set column values
 		idColumn.setCellValueFactory(new PropertyValueFactory<ListedAppointment, String>("appointmentID"));
