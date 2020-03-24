@@ -101,7 +101,7 @@ public class EditCustomerScreenController implements Initializable {
 			//Go back to the customer screen
 			Parent root;
 			Stage stage = (Stage) saveButton.getScene().getWindow();
-			root = FXMLLoader.load(getClass().getResource("../views/CustomerScreen.fxml"));
+			root = FXMLLoader.load(getClass().getResource("/views/CustomerScreen.fxml"));
 			Scene scene = new Scene(root);
 			stage.setScene(scene);
 			stage.setResizable(false);
@@ -119,7 +119,7 @@ public class EditCustomerScreenController implements Initializable {
 		try {
 			Parent root;
 			Stage stage = (Stage) cancelButton.getScene().getWindow();
-			root = FXMLLoader.load(getClass().getResource("../views/CustomerScreen.fxml"));
+			root = FXMLLoader.load(getClass().getResource("/views/CustomerScreen.fxml"));
 			Scene scene = new Scene(root);
 			stage.setScene(scene);
 			stage.setResizable(false);

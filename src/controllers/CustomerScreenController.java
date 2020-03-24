@@ -10,6 +10,7 @@ import java.util.stream.Collectors;
 
 import application.DB;
 import application.ListedCustomer;
+import javafx.beans.binding.Bindings;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -77,7 +78,7 @@ public class CustomerScreenController implements Initializable{
 			try {
 				Parent root;
 				Stage stage = (Stage) appointmentsButton.getScene().getWindow();
-				root = FXMLLoader.load(getClass().getResource("../views/AppointmentScreen.fxml"));
+				root = FXMLLoader.load(getClass().getResource("/views/AppointmentScreen.fxml"));
 				Scene scene = new Scene(root);
 				stage.setScene(scene);
 				stage.setResizable(false);
@@ -102,7 +103,7 @@ public class CustomerScreenController implements Initializable{
 					//Go to add appointment screen
 					Parent root;
 					Stage stage = (Stage) appointmentsButton.getScene().getWindow();
-					root = FXMLLoader.load(getClass().getResource("../views/AddAppointmentScreen.fxml"));
+					root = FXMLLoader.load(getClass().getResource("/views/AddAppointmentScreen.fxml"));
 					Scene scene = new Scene(root);
 					stage.setScene(scene);
 					stage.show();
@@ -119,7 +120,7 @@ public class CustomerScreenController implements Initializable{
 			try {
 				Parent root;
 				Stage stage = (Stage) appointmentsButton.getScene().getWindow();
-				root = FXMLLoader.load(getClass().getResource("../views/AddCustomerScreen.fxml"));
+				root = FXMLLoader.load(getClass().getResource("/views/AddCustomerScreen.fxml"));
 				Scene scene = new Scene(root);
 				stage.setScene(scene);
 				stage.setResizable(false);
@@ -140,7 +141,7 @@ public class CustomerScreenController implements Initializable{
 				//Go to edit screen
 				Parent root;
 				Stage stage = (Stage) appointmentsButton.getScene().getWindow();
-				root = FXMLLoader.load(getClass().getResource("../views/EditCustomerScreen.fxml"));
+				root = FXMLLoader.load(getClass().getResource("/views/EditCustomerScreen.fxml"));
 				Scene scene = new Scene(root);
 				stage.setScene(scene);
 				stage.setResizable(false);
@@ -177,6 +178,9 @@ public class CustomerScreenController implements Initializable{
 			addButton.setOnAction(event -> addButtonAction(event));
 			editButton.setOnAction(event -> editButtonAction(event));
 			deleteButton.setOnAction(event -> deleteButtonAction(event));
+
+			//Disable 'add appointment' button until a customer is selected from the table
+			addAppointmentButton.disableProperty().bind(Bindings.isEmpty(customersTable.getSelectionModel().getSelectedItems()));
 			
 			//Get a list of customers from the database and display them in the table
 			try {

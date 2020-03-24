@@ -105,4 +105,30 @@ public class DB {
 		}
 		return list;
 	}
+
+	public static int getCustomerCount() throws SQLException {
+		ResultSet rs = null;
+		ArrayList<Customer> customers = new ArrayList<Customer>();
+		//Connection to database
+		try (
+				Connection conn = DriverManager.getConnection(URL, USERNAME, PASSWORD);
+				Statement stmt = conn.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+		) {
+			//Get results from SQL query
+			rs = stmt.executeQuery("SELECT * FROM customer");
+			//Create objects for database items and add them to the customer list
+			while (rs.next()) {
+				Customer customer = new Customer(rs.getString("customerName"), rs.getInt("addressId"));
+				customers.add(customer);
+			}
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			if (rs != null) {
+				rs.close();
+			}
+		}
+		return customers.size();
+	}
 }

@@ -65,7 +65,7 @@ public class LoginScreenController {
 		Parent root = null;
 		Stage stage = (Stage) signInButton.getScene().getWindow();
 		try {
-			root = FXMLLoader.load(getClass().getResource("../views/CustomerScreen.fxml"));
+			root = FXMLLoader.load(getClass().getResource("/views/CustomerScreen.fxml"));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -78,12 +78,18 @@ public class LoginScreenController {
 	//Sign in button action
 	private void signInButtonAction(ActionEvent event) throws LoginException {
 		//Check if user name or password fields are empty
-		if (usernameText.getText().isEmpty() || passwordText.getText().isEmpty()) {
-			throw new LoginException();
+		if (usernameText.getText().isEmpty()) {
+			Alert alert = new Alert(AlertType.WARNING);
+			alert.setHeaderText(rb.getString("blank_username_warning"));
+			alert.showAndWait();
+		} else if (passwordText.getText().isEmpty()) {
+			Alert alert = new Alert(AlertType.WARNING);
+			alert.setHeaderText(rb.getString("blank_password_warning"));
+			alert.showAndWait();
 		} else {
-			//Check if user exists in the database
 			try {
 				String username = usernameText.getText().toLowerCase();
+				//Check if user exists in the database
 				if (UserManager.lookup(username)) {
 					//Create a user object for existing user
 					User user = UserManager.getRow(usernameText.getText());

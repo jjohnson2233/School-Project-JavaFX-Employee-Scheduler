@@ -16,9 +16,8 @@ public class Address {
 	private String createdBy;
 	private Timestamp lastUpdate;
 	private String lastUpdateBy;
-	
-	
-	
+
+
 	public Address(String address, String address2, int cityID, int postalCode, long phone) throws SQLException {
 		if (AddressManager.count() == 0) {
 			addressID = 1;
@@ -111,6 +110,4 @@ public class Address {
 	public void setLastUpdateBy(String lastUpdateBy) {
 		this.lastUpdateBy = lastUpdateBy;
 	}
-	
-	
 }

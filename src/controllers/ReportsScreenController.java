@@ -120,7 +120,7 @@ public class ReportsScreenController  implements Initializable {
 		Parent root = null;
 		Stage stage = (Stage) backButton.getScene().getWindow();
 		try {
-			root = FXMLLoader.load(getClass().getResource("../views/AppointmentScreen.fxml"));
+			root = FXMLLoader.load(getClass().getResource("/views/AppointmentScreen.fxml"));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

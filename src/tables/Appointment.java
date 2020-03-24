@@ -23,6 +23,7 @@ public class Appointment {
 	private Timestamp lastUpdate;
 	private String lastUpdateBy;
 
+
 	public Appointment(int customerID, String title, ZonedDateTime start, ZonedDateTime end) throws SQLException {
 		if (AppointmentManager.count() == 0) {
 			appointmentID = 1;
